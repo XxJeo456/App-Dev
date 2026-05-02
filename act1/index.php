@@ -17,7 +17,8 @@
             border-radius: 5px;
 
             p {
-                font-size: 15px;
+                font-size: 13px;
+                margin: 3px 0;
             }
         }
 
@@ -29,11 +30,23 @@
             color: white;
         }
 
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            margin-left: 20px;
+        }
+
         .main {
             margin-top: 10px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+                "profile other-info"
+                "experience other-info"
+                "education other-info";
             column-gap: 5%;
         }
 
@@ -42,7 +55,20 @@
             padding: 20px;
         }
 
+        .profile {
+            grid-area: profile;
+        }
+        
+        .experience {
+            grid-area: experience;
+        }
+
+        .education {
+            grid-area: education;
+        }
+
         .other-info {
+            grid-area: other-info;
             background-color: lightblue;
             border: 2px solid black;
             border-radius: 5px;
@@ -54,6 +80,8 @@
     <?php
         $name = "Jeoffrey Lee R. Plata";
         $job = "Web Developer";
+        $contactNO = "09123456789";
+        $email = "jeoffrey.plata@gmail.com";
 
         $gradeSchool = "Bethel Lutheran School";
         $highSchool = "St. Joseph School Gagalangin";
@@ -76,6 +104,8 @@
             <div class="header">
                 <h1><?= $name ?></h1>
                 <p><?= $job ?></p>
+                <p><?= "Contact No: $contactNO" ?></p>
+                <p><?= "Email: $email" ?></p>
             </div>
             <hr>
             <div class="main">
@@ -88,31 +118,30 @@
                 </div>
                 <div class="other-info">
                     <h2><?php echo "Other Information"; ?></h2>
+                    <h3><?php echo "Languages: " ?></h3>
+                    <p><?= $languages ?></p>
+                    <h3><?php echo "Hobbies: " ?></h3>
+                    <p><?= $hobbies ?></p>
+                    <h3><?php echo "Programming Languages: " ?></h3>
+                    <p><?= $programmingLanguages ?></p>
+                </div>
+                <div class="experience">
+                    <h2><?php echo "Experience"; ?></h2>
                     <ul>
-                        <li><?php echo "Languages: $languages"; ?></li>
-                        <li><?php echo "Hobbies: $hobbies"; ?></li>
-                        <li><?php echo "Programming Languages: $programmingLanguages"; ?></li>
+                        <li><?= $experience1 ?></li>
+                        <li><?= $experience2 ?></li>
                     </ul>
                 </div>
-                <div class="body">
-                    <div class="experience">
-                        <h2><?php echo "Experience"; ?></h2>
-                        <ul>
-                            <li><?= $experience1 ?></li>
-                            <li><?= $experience2 ?></li>
-                        </ul>
-                    </div>
-                    <div class="education">
-                        <h2><?php echo "Education"; ?></h2>
-                        <ul>
-                            <li><?= $gradeSchool ?></li>
-                            <p><?= $gradeSchoolYears ?></p>
-                            <li><?= $highSchool ?></li>
-                            <p><?= $highSchoolYears ?></p>
-                            <li><?= $college ?></li>
-                            <p><?= $collegeYears ?></p>
-                        </ul>
-                    </div>
+                <div class="education">
+                    <h2><?php echo "Education"; ?></h2>
+                    <ul>
+                        <li><?= $gradeSchool ?></li>
+                        <p><?= $gradeSchoolYears ?></p>
+                        <li><?= $highSchool ?></li>
+                        <p><?= $highSchoolYears ?></p>
+                        <li><?= $college ?></li>
+                        <p><?= $collegeYears ?></p>
+                    </ul>
                 </div>
             </div>
         </div>
