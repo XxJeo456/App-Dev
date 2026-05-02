@@ -10,7 +10,8 @@
         }
 
         .header {
-            grid-area: profile;
+            display: flex;
+            align-items: center;
             background-color: lightgray;
             padding: 10px;
             border: 1px solid black;
@@ -19,6 +20,15 @@
             p {
                 font-size: 13px;
                 margin: 3px 0;
+            }
+
+            img {
+                margin-left: auto;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-top: 10px;
+                padding-right: 20px;
             }
         }
 
@@ -81,7 +91,7 @@
         $name = "Jeoffrey Lee R. Plata";
         $job = "Web Developer";
         $contactNO = "09123456789";
-        $email = "jeoffrey.plata@gmail.com";
+        $email = "jeffreyplata086@gmail.com";
 
         $gradeSchool = "Bethel Lutheran School";
         $highSchool = "St. Joseph School Gagalangin";
@@ -96,16 +106,24 @@
 
         $languages = "English, Filipino";
         $hobbies = "Coding, Reading, Gaming";
-        $programmingLanguages = "HTML, CSS, JavaScript, PHP";
+        $programmingLanguages = "HTML, CSS, JavaScript, Python, PHP";
+
+        $person1 = "John Doe";
+        $person1Contact = "09123456789";
+        $person2 = "Jane Smith";
+        $person2Contact = "0987654321";
     ?>
 
     <div class="container">
         <div class="main-info">
             <div class="header">
-                <h1><?= $name ?></h1>
-                <p><?= $job ?></p>
-                <p><?= "Contact No: $contactNO" ?></p>
-                <p><?= "Email: $email" ?></p>
+                <div class="headerText">
+                    <h1><?= $name ?></h1>
+                    <p><?= $job ?></p>
+                    <p><?= "Contact No: $contactNO" ?></p>
+                    <p><?= "Email: $email" ?></p>    
+                </div>
+                <img src="profile.png" alt="Profile Picture">
             </div>
             <hr>
             <div class="main">
@@ -113,7 +131,7 @@
                     <h2><?php echo "Profile"; ?></h2>
                     <p><?php echo "I am a aspring web developer with a passion for creating dynamic and 
                     user-friendly websites.<br>
-                    I have experience in HTML, CSS, JavaScript, and PHP. <br>
+                    I have experience in HTML, CSS, JavaScript, Python, and PHP. <br>
                     Eager to learn more about web development and contribute to exciting projects."; ?></p>
                 </div>
                 <div class="other-info">
@@ -124,6 +142,11 @@
                     <p><?= $hobbies ?></p>
                     <h3><?php echo "Programming Languages: " ?></h3>
                     <p><?= $programmingLanguages ?></p>
+                    <h3><?php echo "References: " ?></h3>
+                    <ul>
+                        <li><?= "$person1 - $person1Contact" ?></li>
+                        <li><?= "$person2 - $person2Contact" ?></li>
+                    </ul>
                 </div>
                 <div class="experience">
                     <h2><?php echo "Experience"; ?></h2>
