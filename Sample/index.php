@@ -50,6 +50,12 @@
         for ($i = $y; $i > 0; $i--) {
             echo "<p>$i</p>";
         }
+
+        
+        $cars = array("Volvo", "BMW", "Toyota");
+        echo "<p>I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".</p>";
+        echo "<p>Number of cars: " . count($cars) . "</p>";
+        
     ?>
 </body>
 </html>
