@@ -9,6 +9,8 @@
     <?php 
         $score = 86;
         $number = 2;
+        $x = 10;
+        $y = 10;
 
         if ($score >= 80 && $score <= 91){
             echo "<h1>Your score is between 80 and 91.</h1>";
@@ -35,6 +37,19 @@
                 echo "<h1>Error, Invalid input</h1>";
         }
 
+        while($x > 0){
+            echo "<p>Count Down: $x</p>";
+            $x--;
+        }
+
+        do {
+            echo "$x ";
+            $x++;
+        } while ($x <= 10);
+
+        for ($i = $y; $i > 0; $i--) {
+            echo "<p>$i</p>";
+        }
     ?>
 </body>
 </html>
