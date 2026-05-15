@@ -74,7 +74,6 @@
         $name = $_POST['name'];
         $grade = $_POST['grade'];
 
-        // Conditional Statement
         if($grade >= 93 && $grade <= 100){
             $rank = "A";
         }
