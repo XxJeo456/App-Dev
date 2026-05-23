@@ -24,6 +24,7 @@
             padding: 20px;
             border-collapse: collapse;
             border: 1px solid lightgray;
+            border-radius: 10px;
             background-color: white;
             drop-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
@@ -106,7 +107,7 @@ $fruits = array(
 );
 ?>
 
-<table border="1">
+<table>
     <tr>
         <th>Image</th>
         <th>Name</th>
