@@ -1,0 +1,24 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 40px; 
+    background-color: #fdfefe; 
+}
+.box { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); 
+    max-width: 500px; 
+    margin-bottom: 20px; 
+    border: 1px solid #e0e0e0; 
+}
+.cookie-group { 
+    margin-top: 15px; 
+    padding: 10px; 
+    background: #f9f9f9; 
+    border-left: 4px solid #777; 
+}
+.active { border-left-color: #4CAF50; background-color: #f0fdf4; }
+.expired { border-left-color: #f44336; background-color: #fef2f2; color: #991b1b; }
+input[type="text"] { width: 100%; padding: 8px; margin: 6px 0 12px; box-sizing: border-box; }
+button { padding: 10px 15px; background: #333; color: #fff; border: none; cursor: pointer; border-radius: 4px; }
