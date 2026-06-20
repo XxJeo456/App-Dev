@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $_SESSION['num1'] = rand(1,20);
+    $_SESSION['num2'] = rand(1,20);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +29,9 @@
         <label for="email"></label>
         <input type="text" name="email" id="email" placeholder="Email" required>
         <label for="password"></label>
-        <input type="text" name="password" id="password" placeholder="Password" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <label for="captcha">Captcha: What is <?php echo $_SESSION['num1'] , "+" ,$_SESSION['num2']?></label>
+        <input type="text" name="captcha" id="captcha" required>
         <input type="submit" name="submit">
     </form>
 </body>

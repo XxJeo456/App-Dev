@@ -1,5 +1,8 @@
 <?php
 
+    session_start();
+    $captcha = $_SESSION['num1'] + $_SESSION['num2'];
+
     $error = [];
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -22,14 +25,19 @@
         }
 
         if(empty($error)){
-            echo $fullName;
-            echo $userName;
-            echo $email;
+            echo "<p>$fullName</p>";
+            echo "<p>$userName</p>";
+            echo "<p>$email</p>";
         } else {
             foreach($error as $err){
-                echo $err . "<br>";
+                echo "<p>$err</p>";
             }
         }
-    }
 
+        if($_POST['captcha'] != $captcha){
+            $error[] = "Captcha is incorrect.";
+        } else {
+            echo "<p>Captcha is correct.</p>";
+        }
+    }
 ?>
