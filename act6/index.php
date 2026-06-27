@@ -46,16 +46,35 @@
             border: 1px solid #777; 
             cursor: pointer; 
             font-size: 14px; 
+            transition: all 0.3s ease;
         }
         input[type="submit"]:hover { 
+            border-radius: 5px;
             background-color: #d0d0d0; 
         }
-        .nav-link { display: inline-block; 
-        margin-top: 15px; 
-        font-size: 13px; 
-        color: #0066cc; 
-        text-decoration: none; 
-    }
+        input[type="submit"]:active { 
+            border-radius: 8px;
+            background-color: #b86b6bff; 
+        }
+        .nav-link { 
+            display: inline-block; 
+            margin-top: 15px; 
+            font-size: 13px; 
+            color: #0066cc; 
+            text-decoration: none; 
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover { 
+            padding: 2px 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            text-decoration: underline;
+        }
+        .nav-link:active { 
+            padding: 0;
+            color: red;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            text-decoration: underline;
+        }
         .message { 
             font-family: Arial; 
             font-size: 14px; 

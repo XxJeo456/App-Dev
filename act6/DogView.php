@@ -24,12 +24,18 @@ $result = $conn->query($sql);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .dog-box { 
-            width: 100%; 
+            width: 80%; 
             border: 1px solid #333; 
-            padding-left: 15px;
+            border-radius: 5px;
+            padding: 15px;
             margin-bottom: 15px; 
             line-height: 1.6; 
             font-size: 14px; 
+            transition: all 0.3s ease;
+        }
+        .dog-box:hover {
+            text-decoration: underline;
+            border-radius: 15px;
         }
         .dog-count { 
             font-weight: normal; 
@@ -41,6 +47,18 @@ $result = $conn->query($sql);
             font-size: 13px; 
             color: #0066cc; 
             text-decoration: none; 
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover { 
+            padding: 2px 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            text-decoration: underline;
+        }
+        .nav-link:active { 
+            padding: 0;
+            color: red;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            text-decoration: underline;
         }
     </style>
 </head>
