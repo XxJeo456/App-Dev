@@ -1,5 +1,4 @@
 <?php
-// DogView.php - Pure Logic up top
 require_once 'config.php';
 
 $sql = "SELECT * FROM dogs";

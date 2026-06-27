@@ -1,12 +1,10 @@
 <?php
-// process_register.php
 require_once 'config.php';
 
 $message = "";
 $msg_color = "green";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect and sanitize form variable inputs
     $d_name   = $conn->real_escape_string($_POST['d_name']);
     $d_breed  = $conn->real_escape_string($_POST['d_breed']);
     $d_age    = $conn->real_escape_string($_POST['d_age']);

@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "dog_db";
+$dbname = "tc22_db";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
