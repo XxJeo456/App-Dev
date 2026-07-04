@@ -11,12 +11,15 @@
             font-family: 'Arial', sans-serif; 
             margin: 0; 
             padding: 0;
+            background-color: #b9f5f7ff;
             color: #333; 
         }
         .form-container { 
             margin: 50px auto;
             padding: 20px;
             width: 320px; 
+            background-color: #8df1f5ff;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .title { 
@@ -36,6 +39,7 @@
             margin-top: 4px; 
             box-sizing: border-box; 
             border: 1px solid #777; 
+            border-radius: 4px;
             font-size: 14px; 
         }
         input[type="submit"] { 
