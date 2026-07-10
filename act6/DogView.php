@@ -15,25 +15,29 @@ $result = $conn->query($sql);
             font-family: 'Arial', sans-serif; 
             margin: 0;
             padding: 0;
+            background-color: #b9f5f7ff;
         }
         .container { 
             width: 600px;
             margin: 50px auto;
             padding: 20px;
             width: 320px; 
+            border-radius: 20px;
+            background-color: #8df1f5ff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .dog-box { 
-            width: 80%; 
+            width: 90%; 
             border: 1px solid #333; 
             border-radius: 5px;
             padding: 15px;
             margin-bottom: 15px; 
             line-height: 1.6; 
             font-size: 14px; 
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
         }
         .dog-box:hover {
+            text-align: center;
             text-decoration: underline;
             border-radius: 15px;
         }
